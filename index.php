@@ -106,11 +106,8 @@ $app->post("/admin/users/:iduser", function($iduser){
 $app->get("/admin/upload", function(){
 	
 	User::verifyLogin();
-	$users = User::listAll();
 	$page = new PageAdmin();
-	$page->setTpl("upload", array(
-			"upload"=>$users
-		));
+	$page->setTpl("upload");
 });
 
 $app->run();
