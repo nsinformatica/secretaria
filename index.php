@@ -103,5 +103,15 @@ $app->post("/admin/users/:iduser", function($iduser){
 	header("Location: /admin/users");
 	exit;
 });
+$app->get("/admin/upload", function(){
+	
+	User::verifyLogin();
+	$users = User::listAll();
+	$page = new PageAdmin();
+	$page->setTpl("upload", array(
+			"upload"=>$users
+		));
+});
+
 $app->run();
 ?>
