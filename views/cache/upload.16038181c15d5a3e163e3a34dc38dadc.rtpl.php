@@ -4,15 +4,10 @@
 </head>
 <body>
 <h1>Tela Upload HTML</h1>
-&lt;?php
-echo "Ambiente Secretaria de Educação de Ibitiara";
-echo "<br>";
-echo "Implantação transporte de Arquivos";
-echo "<br>";
-?&gt;
+
 <form method="POST" enctype="multipart/form-data">
 	<input type="file" name="fileUpload">
-	<button type="submit">Send</button>
+	<button type="submit">Enviar</button>
 </form>
 
 &lt;?php
